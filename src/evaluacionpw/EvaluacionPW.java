@@ -114,7 +114,7 @@ public class EvaluacionPW {
     - op4 Mostrar toda la convocatoria de jugadores
     - op5 Salir*/
 
-      int opcion;
+     /* int opcion;
            Scanner input = new Scanner(System.in);
 
            do{
@@ -132,48 +132,53 @@ public class EvaluacionPW {
                System.out.print("Digite una opcion: ");
                opcion=input.nextInt();
                
-               String[] inventario=new String[23];
+               String[] convocados=new String[3];
                switch(opcion){
-                   
-                   
+
                        
                    case 1: 
                        
                                                                  
-                       for (int i = 0; i <inventario.length ; i++) {
-                           System.out.print("Digite el producto "+(i+1)+" a ingresar ");
-                           inventario[i]=input.next();
+                       for (int i = 0; i <convocados.length ; i++) {
+                           System.out.print("Digite el jugador "+(i+1)+" a ingresar ");
+                           convocados[i]=input.next();
+
                        }
-                       
 
                        break;
-                    
+                   
                    case 2:
                        
-                       System.out.print("Digite un producto a buscar: ");                
-                       String producto=entrada.next();
-                       ClsTienda objtienda2=new ClsTienda();
-                      
-                       int busqueda1=objtienda2.buscarProducto(producto);
-                       if (busqueda1==1)
-                           System.out.println(producto+ " se encuentra en el Inventario");
-                       else
-                           System.out.println(producto+" no se encuentra en el Inventario ");
-                                            
+                      System.out.print("Digite un jugador a a buscar: ");                
+                      String jugadorBuscar=input.next();
+                      boolean flag=false;
+        
+                      for (int i = 0; i <convocados.length ; i++) {
+                          if(convocados[i].equals(jugadorBuscar)){
+                        flag=true;
+                         break;
+                
+                         }else{
+                             flag=false;
+                        }
+                      }
+        
+                    if(flag){
+                        System.out.println("el jugador se encuentra dentro de la lista de convocados");
+                     }else{
+                         System.out.println("el numero no se encuentra dentro de la lista de convocados");
+                    }
+                          
                     break;
                     
                    case 3:
-                       System.out.print("\n Digite un numero entero: ");
-                       int numero3=entrada.nextInt();
-                       
-                       System.out.println("El "+numero3+" +100="+(numero3+100));
-                       
+                          
                     break;
                     
                    case 4:
-                       ClsTienda objtienda3=new ClsTienda();
-                       objtienda3.mostrarInventario();
-                       System.out.println("");
+                       for (int k=0; k<convocados.length;k++){
+                            System.out.print(convocados[k] + " ");
+                       }
                        
                        break;
                                
@@ -183,8 +188,10 @@ public class EvaluacionPW {
                      
                    
                }
+               convocados=convocados;
+               System.out.println("");
                
-           }while(opcion!=5);
+           }while(opcion!=5);*/
         
     }
     
